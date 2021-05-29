@@ -22,3 +22,4 @@ if __name__ == '__main__':
             result = 0
         n //= 2
     print(maximum)
+
