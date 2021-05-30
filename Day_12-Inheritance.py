@@ -10,12 +10,25 @@ class Person:
 
 
 class Student(Person):
-    def __init__(self,firstName, lastName, idNumber, scores):
+    # Class Constructor
+    #
+    #   Parameters:
+    #   firstName - A string denoting the Person's first name.
+    #   lastName - A string denoting the Person's last name.
+    #   id - An integer denoting the Person's ID number.
+    #   scores - An array of integers denoting the Person's test scores.
+    #
+    # Write your constructor here
+    def __init__(self, firstName, lastName, idNumber, scores):
         super().__init__(firstName, lastName, idNumber)
         self.scores = scores
 
+    #   Function Name: calculate
+    #   Return: A character denoting the grade.
+    #
+    # Write your function here
     def calculate(self):
-        a = int(sum(self.scores)/(len(self.scores)))
+        a = int(sum(self.scores) / (len(self.scores)))
         print("a= ", a)
         if (90 <= a <= 100): return "O"
         if (80 <= a < 90): return "E"
@@ -25,22 +38,6 @@ class Student(Person):
         if (a < 40): return "T"
         print("a= ", a)
 
-
-
-# Class Constructor
-#
-#   Parameters:
-#   firstName - A string denoting the Person's first name.
-#   lastName - A string denoting the Person's last name.
-#   id - An integer denoting the Person's ID number.
-#   scores - An array of integers denoting the Person's test scores.
-#
-# Write your constructor here
-
-#   Function Name: calculate
-#   Return: A character denoting the grade.
-#
-# Write your function here
 
 line = input().split()
 firstName = line[0]
